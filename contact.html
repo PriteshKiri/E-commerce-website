@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyKart | Contact Us</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="mykart1.png" width="200"></a>
+        </div>
+        <div class="nav_side ">
+            <a href="about.html"> About Us</a>
+            <a href="Shop.html"> Shop </a>
+            <a href="Blog.html"> Blog </a>
+            <a href="contact.html"> Contact Us</a>
+            <a href=" "> Login/Sign up</a>
+        </div>
+    </nav>
+
+
+    <div class="contact_container">
+        <h2>Contact Us</h2>
+        <div class="g_map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.418676545746!2d77.70192441485779!3d13.19901051341853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1d45513861cf%3A0xed8d399eb150b3a8!2sBangalore%20international%20airport!5e0!3m2!1sen!2sin!4v1620150230935!5m2!1sen!2sin"
+                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact_content">
+            <p><b>Address: Bengaluru, India</b></p>
+            <p><b>Call: +91 8243652579</b></p>
+            <p><b>Mail: support@mykart</b></p>
+        </div>
+    </div>
+
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+            <form name="Gform" method="POST">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email ID"><br>
+                <input type="number" name="Number" placeholder="Contact Number"><br>
+                <textarea name="Review" id="" cols="7" rows="5" placeholder="Write Your review"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="mykart1.png" width="200"></a>
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="about.html"> About Us</a>|
+            <a href="Shop.html"> Shop </a>|
+            <a href="Blog.html"> Blog </a>|
+            <a href="contact.html"> Contact Us</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>|
+            <a href="">Terms of Use</a>|
+            <a href="">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter-square"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href=""><i class="fa fa-envelope"></i></a>
+
+            <hr>
+            <p>Copyright &copy; 2021 Mykart. All rights reserved</p>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxTybBVESd7OfnlrCffQIyXUhrLrwyJeZ7vly-KESgZI5mlmUcewYIjh9aIQrb9G7_n_g/exec'
+        const form = document.forms['Gform']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thankyou for your review"))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>

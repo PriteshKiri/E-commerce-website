@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyKart | About Us</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="mykart1.png" width="200"></a>
+        </div>
+        <div class="nav_side ">
+            <a href="about.html"> About Us</a>
+            <a href="Shop.html"> Shop </a>
+            <a href="Blog.html"> Blog </a>
+            <a href="contact.html"> Contact Us</a>
+            <a href=" "> Login/Sign up</a>
+        </div>
+    </nav>
+    <div class="about_us">
+        <h2>About Us</h2>
+        <div class="about_content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quo corporis veniam voluptate natus
+                tenetur, molestiae facilis blanditiis, neque sint, molestias nemo. Commodi et sapiente suscipit error
+                iste illum at?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quasi placeat velit natus sint quaerat
+                itaque iste consectetur laborum. Aperiam, recusandae porro. Velit qui unde, laudantium recusandae ipsa
+                blanditiis officia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam expedita porro ab, sapiente
+                reiciendis nulla dolore numquam! Nam at, eveniet aliquid suscipit quas saepe dolorem asperiores non
+                placeat assumenda maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                exercitationem molestiae sequi magnam vel beatae corrupti. Cum, sed facilis. Hic commodi labore dolorum
+                accusamus vero architecto veniam quidem dolor officia.
+            </p>
+            <h2> Our Mission</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quasi placeat velit natus sint quaerat
+                itaque iste consectetur laborum. Aperiam, recusandae porro. Velit qui unde, laudantium recusandae ipsa
+                blanditiis officia.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam expedita porro ab, sapiente
+                reiciendis nulla dolore numquam! Nam at, eveniet aliquid suscipit quas saepe dolorem asperiores non
+                placeat assumenda maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                exercitationem molestiae sequi magnam vel beatae corrupti. Cum, sed facilis. Hic commodi labore dolorum
+                accusamus vero architecto veniam quidem dolor officia.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+            <form name="Gform" method="POST">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email ID"><br>
+                <input type="number" name="Number" placeholder="Contact Number"><br>
+                <textarea name="Review" id="" cols="7" rows="5" placeholder="Write Your review"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="mykart1.png" width="200"></a>
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="about.html"> About Us</a>|
+            <a href="Shop.html"> Shop </a>|
+            <a href="Blog.html"> Blog </a>|
+            <a href="contact.html"> Contact Us</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>|
+            <a href="">Terms of Use</a>|
+            <a href="">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter-square"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href=""><i class="fa fa-envelope"></i></a>
+
+            <hr>
+            <p>Copyright &copy; 2021 Mykart. All rights reserved</p>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxTybBVESd7OfnlrCffQIyXUhrLrwyJeZ7vly-KESgZI5mlmUcewYIjh9aIQrb9G7_n_g/exec'
+        const form = document.forms['Gform']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thankyou for your review"))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
